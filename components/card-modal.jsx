@@ -530,7 +530,7 @@ export function CardModal({ card, onClose }) {
   {/* Required hidden fields */}
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="box" />
-  <input type="hidden" name="_next" value="https://yourportfolio.vercel.app/thank-you" />
+  <input type="hidden" name="_next" value="https://adityasharma1.vercel.app/" />
 
   {/* Required name attributes! */}
   <Input
