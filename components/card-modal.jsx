@@ -622,69 +622,104 @@ export function CardModal({ card, onClose }) {
           </div>
         )
 
-      case "music":
-        return (
-          <div className="space-y-6">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">My Coding Soundtrack</h2>
-              <p className="text-gray-400">The beats that fuel my creativity</p>
-            </div>
+          case "music":
+              const [selectedCert, setSelectedCert] = useState(null)
 
-            <div className="bg-white/5 rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Currently Playing</h3>
-
-              <div className="grid gap-4">
-                {[
-                  {
-                    track: "Synthwave Coding Mix",
-                    artist: "Various Artists",
-                    mood: "🚀 Focus Mode",
-                    duration: "2:45:30",
-                  },
-                  { track: "Lo-Fi Hip Hop Beats", artist: "ChilledCow", mood: "😌 Chill Coding", duration: "1:30:15" },
-                  {
-                    track: "Epic Orchestral Mix",
-                    artist: "Two Steps From Hell",
-                    mood: "💪 Power Coding",
-                    duration: "3:15:45",
-                  },
-                  { track: "Ambient Space Music", artist: "Stellardrone", mood: "🌌 Deep Work", duration: "2:00:30" },
-                ].map((song, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-                        <Music className="text-white text-xl" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-white">{song.track}</div>
-                        <div className="text-gray-400 text-sm">{song.artist}</div>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-sm bg-purple-100/10 text-purple-300 px-3 py-1 rounded-full">
-                        {song.mood}
-                      </span>
-                      <div className="text-xs text-gray-400 mt-1">{song.duration}</div>
-                    </div>
+              const certificates = [
+                {
+                  title: "Winner of technovision",
+                  platform: "Chitkara University , Rajpura",
+                  date: "23-May-2025",
+                  image: "/technovision.png",
+                },
+                {
+                  title: "BharatTech 2.0 Hackathon",
+                  platform: "SVIET",
+                  date: "08-Feb-2025",
+                  image: "/SVIET.png",
+                },
+                {
+                  title: "Top 20 MongoDB Projects",
+                  platform: "CGC Jhanjheri",
+                  date: "01-March-2025",
+                  image: "/jhanjheri.png",
+                },
+                {
+                  title: "Top 20 teams selected",
+                  platform: "Chitkara University , Rajpura",
+                  date: "15-April-2025",
+                  image: "/tech.png",
+                },
+                {
+                  title: "Top 7 Finalists",
+                  platform: "Chitaka University , Himachal",
+                  date: "01-March-2025",
+                  image: "/ceedchitkara.png",
+                },
+                {
+                  title: "Participation",
+                  platform: "Chitaka University , Himachal",
+                  date: "March 2025",
+                  image: "/Symphosium.png",
+                },
+              ]
+                useEffect(() => {
+                if (selectedCert) {
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                  document.body.style.overflow = "hidden"
+                } else {
+                  document.body.style.overflow = "auto"
+                }
+              }, [selectedCert])
+              return (
+                
+                <div className="space-y-6 relative">
+                  <div className="text-center">
+                    <h2 className="text-3xl font-bold text-white mb-4">My Certificates</h2>
+                    <p className="text-gray-400">Proof of skills, hard work, and dedication 🎓</p>
                   </div>
-                ))}
-              </div>
 
-              <div className="mt-8 text-center">
-                <p className="text-gray-300 mb-4">
-                  Music is essential to my creative process. The right playlist can turn a challenging bug into an
-                  exciting puzzle! 🎧
-                </p>
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                  🎵 View Full Playlist
-                </Button>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {certificates.map((cert, i) => (
+                      <div
+                        key={i}
+                        className="bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 cursor-pointer"
+                        onClick={() => setSelectedCert(cert)}
+                      >
+                        <img
+                          src={cert.image}
+                          alt={cert.title}
+                          className="w-full h-48 object-cover border-b border-white/10"
+                        />
+                        <div className="p-4">
+                          <h3 className="text-lg font-bold text-white">{cert.title}</h3>
+                          <p className="text-sm text-gray-400">{cert.platform}</p>
+                          <p className="text-xs text-gray-500 mt-1">{cert.date}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {selectedCert && (
+                    <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+                      <div className="bg-white/10 border border-white/20 rounded-xl max-w-3xl w-full relative overflow-hidden">
+                        <button
+              className="absolute top-4 right-4 bg-white hover:bg-gray-200 text-black rounded-full p-1 shadow"
+              onClick={() => setSelectedCert(null)}
+            >
+              <X className="w-5 h-5" />
+            </button>
+              <img src={selectedCert.image} alt={selectedCert.title} className="w-full max-h-[70vh] object-contain" />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-white">{selectedCert.title}</h3>
+                <p className="text-sm text-gray-400">{selectedCert.platform}</p>
+                <p className="text-xs text-gray-500">{selectedCert.date}</p>
+              </div>      
+                </div>
               </div>
-            </div>
+              )}
           </div>
-        )
+              )
 
       case "stats":
         return (
