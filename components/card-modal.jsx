@@ -242,7 +242,7 @@ export function CardModal({ card, onClose }) {
                   status: "Beta",
                   users: "Live",
                   github: "https://github.com/vaibhav-katyal/EduSphere",
-                  live: "https://edu-sphere-steel.vercel.app/",
+                  live: "https://edu-sphere-steel.vercel.app/dashboard.html",
                 },
                 {
                   name: "PoolMate",
@@ -253,7 +253,7 @@ export function CardModal({ card, onClose }) {
                   status: "Live",
                   users: "Live",
                   github: "https://github.com/vaibhav-katyal/poolmate",
-                  live: "https://example.com",
+                  live: "https://poolmate.onrender.com/",
                 },
                 {
                   name: "Unibux",
