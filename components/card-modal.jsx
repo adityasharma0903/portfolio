@@ -242,7 +242,7 @@ export function CardModal({ card, onClose }) {
                   status: "Beta",
                   users: "Live",
                   github: "https://github.com/vaibhav-katyal/EduSphere",
-                  live: "https://github.com/vaibhav-katyal/EduSphere",
+                  live: "https://edu-sphere-steel.vercel.app/",
                 },
                 {
                   name: "PoolMate",
@@ -273,7 +273,7 @@ export function CardModal({ card, onClose }) {
                   status: "Live",
                   users: "Live",
                   github: "https://github.com/adityasharma0903/ExpenseTracker",
-                  live: "https://unibux.vercel.app/",
+                  live: "https://revoliq.vercel.app/",
                 },
                 {
                   name: "NyayGPT",
