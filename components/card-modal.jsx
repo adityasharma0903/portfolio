@@ -369,7 +369,7 @@ export function CardModal({ card, onClose }) {
                     "Centralized academic resources (notes, videos, links)",
                     "Personalized dashboard to track sessions and friends",
                   ],
-                  technologies: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"],
+                  technologies: ["Node.js", "Javascript", "Flask", "PyTorch", "Judge0 API", "Socket.IO", "WebRTC", "MongoDB","HTML", "CSS", "Monaco Editor","JWT"],
                 },
                 {
                   title: "🏆 Top MongoDB Project – Hack-N-Win 2.0",
@@ -384,7 +384,7 @@ export function CardModal({ card, onClose }) {
                     "Integrated MongoDB with Node.js and Express for robust API performance",
                     "Collaborated in a cross-functional team using Git workflows",
                   ],
-                  technologies: ["React", "Express.js", "MongoDB", "Socket.io", "Heroku"],
+                  technologies: ["React", "Express.js", "MongoDB", "Socket.io", "JWT"],
                 },
                 {
                   title: "🏆 Top 20 Projects – Techabhivyakti 3.0",
@@ -399,7 +399,7 @@ export function CardModal({ card, onClose }) {
                     "Event calendar with live countdown",
                     "Certificate & participation record tracker",
                   ],
-                  technologies: ["Vue.js", "JavaScript", "SASS", "Webpack", "Figma"],
+                  technologies: ["HTML","CSS","Javascript","Node.js", "Express.js" , "MongoDB", "Node Mailer","Cloudinary","Chart.js" ],
                 },
                 {
                   title: "🚀 Top 7 Finalist – Emergence 25 (Startup Event)",
@@ -414,7 +414,7 @@ export function CardModal({ card, onClose }) {
                     "alidated product-market fit through primary user feedback",
                     "Contributed to UI/UX, backend, and business deck preparation",
                   ],
-                  technologies: ["Vue.js", "JavaScript", "SASS", "Webpack", "Figma"],
+                  technologies: ["HTML","CSS","Javascript","Node.js", "Express.js" , "MongoDB","Cloudinary","HTML5-qrcode", "JWT/Session","Chart.js" ],
                 },
                 {
                   title: "🥇 Winner – Technovision 4.0",
@@ -429,7 +429,7 @@ export function CardModal({ card, onClose }) {
                     "Ultra-sonic obstacle detection for safety",
                     "Wireless control panel for manual override",
                   ],
-                  technologies: ["Vue.js", "JavaScript", "SASS", "Webpack", "Figma"],
+                  technologies: ["C++", "SASS", "Webpack", "Figma","Arduino Mega", "24V Battery", "Ultrasonic Sensor", "24V Motors", "Motor driver", "Bluetooth Module"],
                 },
               ].map((job, index) => (
                 <div key={index} className="bg-white/5 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
