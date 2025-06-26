@@ -42,7 +42,7 @@ export function FloatingDock({ onCardClick }) {
     {
       icon: Twitter,
       label: "Twitter",
-      action: () => window.open("https://twitter.com", "_blank"),
+      action: () => window.open("https://x.com/AdityaShar79297", "_blank"),
     },
   ]
 
